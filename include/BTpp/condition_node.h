@@ -1,7 +1,7 @@
 #ifndef CONDITIONNODE_H
 #define CONDITIONNODE_H
 
-#include "leaf_node.h"
+#include <BTpp/leaf_node.h>
 
 namespace BT
 {
