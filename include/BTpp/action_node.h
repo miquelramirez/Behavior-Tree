@@ -10,7 +10,8 @@ namespace BT
     {
     public:
         // Constructor
-        ActionNode(std::string name, bool multithreaded = true);
+        ActionNode(std::string name);
+        ActionNode(std::string name, bool multithreaded);
         ~ActionNode();
 
 

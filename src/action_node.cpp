@@ -13,6 +13,15 @@
 #include <BTpp/action_node.h>
 #include <string>
 
+BT::ActionNode::ActionNode(std::string name )
+    : LeafNode::LeafNode(name)
+{
+    multithreaded_ = true;
+    type_ = BT::ACTION_NODE;
+    if ( multithreaded_ )
+        thread_ = std::thread(&ActionNode::WaitForTick, this);
+}
+
 
 BT::ActionNode::ActionNode(std::string name, bool multithreaded )
     : LeafNode::LeafNode(name)
