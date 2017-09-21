@@ -1,7 +1,7 @@
 #ifndef ACTIONTEST_H
 #define ACTIONTEST_H
 
-#include <action_node.h>
+#include <BTpp/action_node.h>
 
 namespace BT
 {
@@ -16,7 +16,7 @@ namespace BT
         // The method that is going to be executed by the thread
         BT::ReturnStatus Tick();
         void set_time(int time);
-	
+
         // The method used to interrupt the execution of the node
         void Halt();
         void set_boolean_value(bool boolean_value);

@@ -112,20 +112,18 @@ target_link_libraries(BTpp ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${X11_LIBRARIES})
 # INSTALLATION OF LIBRARY AND EXECUTABLE TO /usr/local
 ######################################################
 install(TARGETS BTpp
-        EXPORT  btpp-targets
         DESTINATION lib/BTpp
 )
+install(FILES ${BTHeadLibrary}
+        DESTINATION include/BTpp
+)
 
-export(PACKAGE BTpp)
+#export(PACKAGE BTpp)
 
- install(EXPORT btpp-targets DESTINATION lib/BTpp)
+#install(EXPORT btpp-targets DESTINATION lib/BTpp)
 
- install(FILES btpp-config.cmake DESTINATION lib/BTpp)
+#install(FILES btpp-config.cmake DESTINATION lib/BTpp)
 #set(btpp_INCLUDE_DIRS /usr/local/include/BTpp)
 #set(btpp_LIBRARY /usr/local/lib/BTpp/libbtpp.a)
 #message("the value of btpp_INCLUDE_DIRS: " ${btpp_INCLUDE_DIRS})
 #message("the value of btpp_LIBRARY: " ${btpp_LIBRARY})
-
-
-
-

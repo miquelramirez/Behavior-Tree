@@ -12,9 +12,9 @@
 
 
 
-#include<draw.h>
-#include<string>
-#include<vector>
+#include <BTpp/draw.h>
+#include <string>
+#include <vector>
 
 #include <X11/Xlib.h>
 
@@ -513,13 +513,3 @@ void drawTree(BT::ControlNode* tree_)
 
     /***************************ENDOF BT VISUALIZATION ****************************/
 }
-
-
-
-
-
-
-
-
-
-

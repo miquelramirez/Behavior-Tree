@@ -1,4 +1,4 @@
-#include <decorator_negation_node.h>
+#include <BTpp/decorator_negation_node.h>
 
 
 BT::DecoratorNegationNode::DecoratorNegationNode(std::string name) : ControlNode::ControlNode(name)

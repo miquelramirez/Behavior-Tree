@@ -11,7 +11,7 @@
 */
 
 
-#include <behavior_tree.h>
+#include <BTpp/behavior_tree.h>
 
 
 int main(int argc, char **argv)
@@ -62,5 +62,3 @@ int main(int argc, char **argv)
 
     return 0;
 }
-
-

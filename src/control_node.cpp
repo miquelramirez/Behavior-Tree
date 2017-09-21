@@ -11,7 +11,7 @@
 */
 
 
-#include <control_node.h>
+#include <BTpp/control_node.h>
 #include <string>
 #include <vector>
 
@@ -105,4 +105,3 @@ int BT::ControlNode::Depth()
     }
     return 1 + depMax;
 }
-

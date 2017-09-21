@@ -1,7 +1,7 @@
 #ifndef SEQUENCENODE_H
 #define SEQUENCENODE_H
 
-#include <control_node.h>
+#include <BTpp/control_node.h>
 
 namespace BT
 {

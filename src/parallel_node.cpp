@@ -12,7 +12,7 @@
 */
 
 
-#include <parallel_node.h>
+#include <BTpp/parallel_node.h>
 #include <string>
 
 BT::ParallelNode::ParallelNode(std::string name, int threshold_M) : ControlNode::ControlNode(name)
@@ -119,6 +119,3 @@ void BT::ParallelNode::set_threshold_M(unsigned int threshold_M)
 {
     threshold_M_ = threshold_M;
 }
-
-
-

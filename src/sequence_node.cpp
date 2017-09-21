@@ -12,7 +12,7 @@
 */
 
 
-#include <sequence_node.h>
+#include <BTpp/sequence_node.h>
 #include <string>
 
 

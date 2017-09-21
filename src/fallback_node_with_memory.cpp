@@ -10,7 +10,7 @@
 *   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <fallback_node_with_memory.h>
+#include <BTpp/fallback_node_with_memory.h>
 #include <string>
 
 BT::FallbackNodeWithMemory::FallbackNodeWithMemory(std::string name) : ControlNode::ControlNode(name)
@@ -131,5 +131,3 @@ void BT::FallbackNodeWithMemory::Halt()
     current_child_idx_ = 0;
     BT::ControlNode::Halt();
 }
-
-

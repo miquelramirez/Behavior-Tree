@@ -1,4 +1,4 @@
-#include <decorator_retry_node.h>
+#include <BTpp/decorator_retry_node.h>
 
 
 BT::DecoratorRetryNode::DecoratorRetryNode(std::string name, unsigned int NTries) : ControlNode::ControlNode(name)
@@ -180,4 +180,3 @@ int BT::DecoratorRetryNode::DrawType()
 
     return BT::DECORATOR;
 }
-

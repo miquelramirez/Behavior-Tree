@@ -11,7 +11,7 @@
 #include <math.h>
 #include<iostream>
 #include<string>
-#include <control_node.h>
+#include <BTpp/control_node.h>
 
 //enum status {RUNNING,SUCCESS,FAILURE,IDLE, HALTED };
 
