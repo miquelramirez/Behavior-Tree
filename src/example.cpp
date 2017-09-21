@@ -33,7 +33,7 @@ public:
     void Halt();
 };
 
-MyAction::MyAction(std::string name) : ActionNode::ActionNode(name)
+MyAction::MyAction(std::string name) : ActionNode::ActionNode(name,true)
 {
 
 }

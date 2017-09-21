@@ -34,7 +34,7 @@ BT::ReturnStatus BT::ParallelNode::Tick()
     {
         DEBUG_STDOUT(get_name() << "TICKING " << children_nodes_[i]->get_name());
 
-        if (children_nodes_[i]->get_type() == BT::ACTION_NODE)
+        if (children_nodes_[i]->get_type() == BT::ACTION_NODE && children_nodes_[i]->is_multithreaded())
         {
             // 1) If the child i is an action, read its state.
             // Action nodes runs in another parallel, hence you cannot retrieve the status just by executing it.

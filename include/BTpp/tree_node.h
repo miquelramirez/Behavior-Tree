@@ -109,6 +109,8 @@ namespace BT
         std::condition_variable state_condition_variable_;
         // Node type
         NodeType type_;
+        // Multithreaded (Tick needs to run on its own thread)
+        bool multithreaded_;
         //position and offset for horizontal positioning when drawing
         float x_shift_, x_pose_;
 
@@ -126,6 +128,8 @@ namespace BT
         // The constructor and the distructor
         TreeNode(std::string name);
         ~TreeNode();
+
+        bool    is_multithreaded() const { return multithreaded_; }
 
         // The method that is going to be executed when the node receive a tick
         virtual BT::ReturnStatus Tick() = 0;

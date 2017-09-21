@@ -14,10 +14,13 @@
 #include <string>
 
 
-BT::ActionNode::ActionNode(std::string name) : LeafNode::LeafNode(name)
+BT::ActionNode::ActionNode(std::string name, bool multithreaded )
+    : LeafNode::LeafNode(name)
 {
+    multithreaded_ = multithreaded;
     type_ = BT::ACTION_NODE;
-    thread_ = std::thread(&ActionNode::WaitForTick, this);
+    if ( multithreaded_ )
+        thread_ = std::thread(&ActionNode::WaitForTick, this);
 }
 
 BT::ActionNode::~ActionNode() {}

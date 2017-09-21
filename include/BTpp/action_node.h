@@ -10,8 +10,10 @@ namespace BT
     {
     public:
         // Constructor
-        ActionNode(std::string name);
+        ActionNode(std::string name, bool multithreaded = true);
         ~ActionNode();
+
+
 
         // The method that is going to be executed by the thread
         void WaitForTick();
@@ -23,7 +25,7 @@ namespace BT
         // Methods used to access the node state without the
         // conditional waiting (only mutual access)
         bool WriteState(ReturnStatus new_state);
-    int DrawType();
+        int DrawType();
     };
 }
 

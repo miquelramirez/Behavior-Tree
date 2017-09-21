@@ -15,7 +15,7 @@
 #include <string>
 
 
-BT::ActionTestNode::ActionTestNode(std::string name) : ActionNode::ActionNode(name)
+BT::ActionTestNode::ActionTestNode(std::string name) : ActionNode::ActionNode(name,true)
 {
     boolean_value_ = true;
     time_ = 3;
@@ -69,5 +69,3 @@ void BT::ActionTestNode::set_boolean_value(bool boolean_value)
 {
     boolean_value_ = boolean_value;
 }
-
-

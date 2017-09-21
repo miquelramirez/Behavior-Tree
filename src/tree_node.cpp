@@ -20,6 +20,7 @@ BT::TreeNode::TreeNode(std::string name) : tick_engine(0)
     name_ = name;
     is_state_updated_ = false;
     set_status(BT::IDLE);
+    multithreaded_ = false;
 }
 
 BT::TreeNode::~TreeNode() {}
