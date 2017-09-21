@@ -4,7 +4,7 @@ project(BTpp)
 set(CMAKE_BUILD_TYPE Release)
 add_definitions(-lX11 -Wall -lglut -lGL -lgtest -std=c++11  -pthread -lrt )
 # Needed for using threads
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -pthread")
 
 
 
@@ -105,14 +105,14 @@ target_link_libraries(btpp_example  ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${X11_LI
 ######################################################
 # COMPILING LIBRARY
 ######################################################
-add_library(BTpp STATIC ${BTSrcLibrary} ${BTHeadLibrary})
+add_library(BTpp SHARED ${BTSrcLibrary} ${BTHeadLibrary})
 target_link_libraries(BTpp ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${X11_LIBRARIES})
 
 ######################################################
 # INSTALLATION OF LIBRARY AND EXECUTABLE TO /usr/local
 ######################################################
 install(TARGETS BTpp
-        DESTINATION lib/BTpp
+        DESTINATION lib
 )
 install(FILES ${BTHeadLibrary}
         DESTINATION include/BTpp
